@@ -1,5 +1,21 @@
 <html lang="en">
 <head>
+
+    <script>
+        var song = new Audio('assets/music/andrewcornish-notefromjuly-short.wav');
+
+        function playpause(id){
+
+        if (!song.paused) {
+            song.pause();
+            // document.getElementById("logo-img").src = "assets/logo/logo-gray.png";
+        } else {
+            song.play();
+            // document.getElementById("logo-img").src = "assets/logo/logo-rainbow.png";
+        }
+    }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -11,7 +27,7 @@
 <body>
     
     <!-- Profile picture-->
-    <img src="assets/allstonmelee/logo.jpg" alt="profile picture" class="logo">
+    <img onclick="playpause('logo')" src="assets/allstonmelee/logo.jpg" alt="profile picture" class="logo">
 
     <!-- Header text-->
     <div class="header-text">
@@ -80,8 +96,10 @@
         letter-spacing: 2px;
     }
 
+
     h1 {
         font-size: 40px;
+        line-height: 100%;
         color: rgb(255, 255, 255);
     }
 
@@ -92,6 +110,7 @@
 
     p {
         font-size: 16px;
+        line-height: 100%;
         color: rgb(187, 187, 187);
     }
 
